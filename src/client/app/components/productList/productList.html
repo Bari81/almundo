@@ -1,0 +1,36 @@
+<div class="listContainer">
+  <div class="list-group">
+    <div
+      ng-repeat="plitem in $ctrl.productList track by $index"
+      class="list-group-item list-group-item-action flex-column align-items-start"
+    >
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="{{ $ctrl.imagespath }}{{ plitem.image }}" />
+        </div>
+
+        <div class="col-sm-6 titleItem">
+          <h5 class="text-info">{{ plitem.name }}</h5>
+          <p html="$ctrl.renderStars(plitem.stars)"></p>
+        </div>
+        <div class="col-sm-2 sideInfo">
+          <div class="row">
+            <div class="col-sm-12">
+              <small class="precioNoche">Precio por noche de habitacion</small>
+            </div>
+            <div class="col-sm-12">
+              <h2 class="price">
+                <small>ARS</small> <b>{{ plitem.price | currency: "":0 }}</b>
+              </h2>
+            </div>
+            <div class="col-sm-12">
+              <button class="btn btn-primary almundoButton px-4" type="button">
+                Ver hotel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

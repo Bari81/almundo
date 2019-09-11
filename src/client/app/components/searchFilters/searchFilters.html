@@ -1,0 +1,139 @@
+<div class="filterCards">
+  <div class="card" ng-click="$ctrl.enableFilters()">
+    <div class="card-body p-2">
+      <span class="card-title"><b>Filtros</b></span>
+      <span class="pull-right">
+        <i class="fa fa-caret-down"></i>
+      </span>
+    </div>
+  </div>
+  <div ng-show="$ctrl.showFilters">
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text text-info">Nombre de hotel</p>
+        <nav>
+          <div class="search-bar">
+            <div class="searchContainer">
+              <div class="d-flex">
+                <input
+                  type="text"
+                  ng-model="$ctrl.token"
+                  name="searchAlmundoTextBox"
+                  required="true"
+                  ng-trim="true"
+                  class="form-control mr-1"
+                  placeholder="Ingrese el nombre del hotel"
+                  aria-label="Ingrese el nombre del hotel"
+                  aria-describedby="Ingrese el nombre del hotel"
+                  ng-keyup="$event.keyCode == 13 && $ctrl.redirectSearch()"
+                />
+
+                <button
+                  class="btn btn-primary almundoButton"
+                  type="button"
+                  ng-click="$ctrl.redirectSearch()"
+                >
+                  Aceptar
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text text-info">Estrellas</p>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value="all"
+            id="allChecked"
+            checked="checked"
+            ng-click="$ctrl.showStars()"
+            ng-checked="$ctrl.starsSelected == undefined"
+          />
+          <label class="form-check-label" for="allChecked">
+            Todas las estrellas
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="check5"
+            ng-click="$ctrl.showStars(5)"
+            ng-checked="$ctrl.starsSelected == 5"
+          />
+          <label class="form-check-label" for="check5">
+            <span><i class="text-warning fa fa-star"></i></span>
+            <span><i class="text-warning fa fa-star"></i></span>
+            <span><i class="text-warning fa fa-star"></i></span>
+            <span><i class="text-warning fa fa-star"></i></span>
+            <span><i class="text-warning fa fa-star"></i></span>
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="check4"
+            ng-click="$ctrl.showStars(4)"
+            ng-checked="$ctrl.starsSelected == 4"
+          />
+          <label class="form-check-label" for="check4">
+            <span><i class="text-warning fa fa-star"></i></span>
+            <span><i class="text-warning fa fa-star"></i></span>
+            <span><i class="text-warning fa fa-star"></i></span>
+            <span><i class="text-warning fa fa-star"></i></span>
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="check3"
+            ng-click="$ctrl.showStars(3)"
+            ng-checked="$ctrl.starsSelected == 3"
+          />
+          <label class="form-check-label" for="check3">
+            <span><i class="text-warning fa fa-star"></i></span>
+            <span><i class="text-warning fa fa-star"></i></span>
+            <span><i class="text-warning fa fa-star"></i></span>
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="check2"
+            ng-click="$ctrl.showStars(2)"
+            ng-checked="$ctrl.starsSelected == 2"
+          />
+          <label class="form-check-label" for="defaultCheck1">
+            <span><i class="text-warning fa fa-star"></i></span>
+            <span><i class="text-warning fa fa-star"></i></span>
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="check1"
+            ng-click="$ctrl.showStars(1)"
+            ng-checked="$ctrl.starsSelected == 1"
+          />
+          <label class="form-check-label" for="defaultCheck1">
+            <span><i class="text-warning fa fa-star"></i></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

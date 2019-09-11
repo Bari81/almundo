@@ -1,0 +1,39 @@
+.filterCards {
+  padding-top: 6%;
+  .fade {
+    transition: height 1s linear;
+    opacity: 1;
+    &:not(.show) {
+      opacity: 1;
+    }
+  }
+  .ng-hide {
+    opacity: 0;
+    transition: none 0;
+  }
+  .search-bar {
+    .btn {
+      height: 38px;
+    }
+    .searchContainer {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: lightgray;
+      opacity: 1; /* Firefox */
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: lightgray;
+    }
+
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: lightgray;
+    }
+  }
+}

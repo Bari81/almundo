@@ -1,0 +1,37 @@
+{
+  "name": "almundo",
+  "version": "1.0.0",
+  "description": "Demo para almundo",
+  "scripts": {
+    "start:server": "node ./src/server/bin/www",
+    "start": "webpack-dev-server --open --hot --mode development"
+  },
+  "author": "Alvaro Eibes",
+  "license": "ISC",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.22",
+    "angular": "^1.7.8",
+    "bootstrap": "^4.3.1",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "file-loader": "^4.2.0",
+    "jade": "^1.11.0",
+    "morgan": "^1.9.1",
+    "sass": "^1.23.0-module.beta.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "svg-inline-loader": "^0.8.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
+  }
+}

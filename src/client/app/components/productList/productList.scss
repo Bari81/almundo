@@ -1,0 +1,52 @@
+.listContainer {
+  .list-group {
+    padding-top: 2%;
+    a {
+      cursor: pointer;
+    }
+    img {
+      height: 200px;
+      width: 300px;
+    }
+    .price {
+      color: darkorange;
+    }
+    .sideInfo {
+      text-align: center;
+      padding-top: 2%;
+      border-left: 2px dotted dimgrey;
+      .precioNoche {
+        display: table-cell;
+      }
+    }
+    .list-group-item {
+      margin-bottom: 1%;
+    }
+  }
+  .w-25 {
+    float: left;
+  }
+  .w-40 {
+    width: 40% !important;
+    float: left;
+  }
+  .w-50 {
+    float: left;
+  }
+  .w-60 {
+    width: 60% !important;
+    float: left;
+  }
+  .titleItem {
+    padding-top: 15px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .listContainer {
+    .list-group img {
+      height: 50vw;
+      width: 80vw;
+    }
+  }
+}
